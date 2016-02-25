@@ -108,7 +108,7 @@ public class StorePresent {
 
 
         }
-        Log.i("values sort", showpresent[0][0]);
+     //   Log.i("values sort", showpresent[0][0]);
         tie=ti;
     }
 
