@@ -30,7 +30,7 @@ public class RecycleList extends RecyclerView.Adapter<RecycleList.CustomViewHold
     int n=3,a,b,c,d;
 
     public RecycleList(Context context, String[][] present, int[][] time, int o,String[] Number) {
-        Log.i("values recyc",present[0][0]+"---------");
+      //  Log.i("values recyc",present[0][0]+"---------");
         this.context = context;
         this.present = present;
         this.time=time;

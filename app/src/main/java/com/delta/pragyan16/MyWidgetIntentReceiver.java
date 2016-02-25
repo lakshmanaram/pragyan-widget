@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
 
+
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
@@ -22,11 +23,11 @@ public class MyWidgetIntentReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-       // if (intent.getAction().equals(WidgetUtils.WIDGET_UPDATE_ACTION)) {
+        // if (intent.getAction().equals(WidgetUtils.WIDGET_UPDATE_ACTION)) {
 
 
-            updateWidgetPictureAndButtonListener(context);
-       // }
+        //  updateWidgetPictureAndButtonListener(context);
+        // }
     }
 
 
@@ -34,20 +35,20 @@ public class MyWidgetIntentReceiver extends BroadcastReceiver {
 
         /*RemoteViews remoteViews = new RemoteViews(context.getPackageName(),
                 R.layout.upcoming_widget);*/
-        StorePresent.showsort();
+       /* StorePresent.showsort();
 
         // Construct the RemoteViews object
         if(StorePresent.tie==0){
             RemoteViews noviews = new RemoteViews(context.getPackageName(), R.layout.no_widget_events);
-            noviews.setOnClickPendingIntent(R.id.Next,
-                    UpcomingWidget.buildButtonPendingIntent(context));
-            UpcomingWidget.pushWidgetUpdate(context.getApplicationContext(),
-                    noviews);
+           // noviews.setOnClickPendingIntent(R.id.Next, getPendingSelfIntentfront(context, MyOnClick1));
+            //noviews.setOnClickPendingIntent(R.id.Prev, getPendingSelfIntentback(context, MyOnClick2));
+          //  UpcomingWidget.pushWidgetUpdate(context.getApplicationContext(),                    noviews);
+          pushWidgetUpdate(context.getApplicationContext(),      noviews);
         }
         else {
 
             if(StorePresent.tie>0)
-                StorePresent.pos%=StorePresent.tie;
+                StorePresent.pos=(StorePresent.pos+StorePresent.tie)%StorePresent.tie;
             else
                 StorePresent.pos=0;
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.upcoming_widget2);
@@ -95,12 +96,11 @@ public class MyWidgetIntentReceiver extends BroadcastReceiver {
                 views.setTextViewText(R.id.widgetCate, StorePresent.showpresent[StorePresent.pos][2]);
 
                 // Instruct the widget manager to update the widget
-            views.setOnClickPendingIntent(R.id.Next,
-                    UpcomingWidget.buildButtonPendingIntent(context));
+          //  views.setOnClickPendingIntent(R.id.Next,                UpcomingWidget.buildButtonPendingIntent(context));
             UpcomingWidget.pushWidgetUpdate(context.getApplicationContext(),
                     views);
 
-        }
+        }*/
 
     }
 
